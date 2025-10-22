@@ -9,9 +9,9 @@
 # Add a feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-# Add OpenClash feed (use full path to ensure location)
+# Add OpenClash feed (fixed format: space-separated branch)
 cd $GITHUB_WORKSPACE/openwrt || cd openwrt  # Ensure in OpenWrt dir
-echo "src-git luci-app-openclash https://github.com/vernesong/OpenClash.git;master" >> feeds.conf.default
+echo "src-git luci-app-openclash https://github.com/vernesong/OpenClash.git master" >> feeds.conf.default
 
 # other
 # rm -rf package/emortal/{autosamba,ipv6-helper}
